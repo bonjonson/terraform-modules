@@ -1,4 +1,4 @@
-resource "fortios_system_dnsdatabase" "this" {
+resource "fortios_system_dnsdatabase" "dns_zone" {
   for_each = { for db in var.dnsdatabase_config : db.name => db }
 
   name                    = each.value.name
